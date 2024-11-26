@@ -20,15 +20,15 @@ int greenValue;
 int blueValue;
 
 //this sets the Values equal to the number obtained from the web dashboard
-// The 255- depends on whether the LED is cathode or anode type
+//Do 255-param.asInt() if LED is anode type
 BLYNK_WRITE(V0) {
-  redValue = 255 - param.asInt();
+  redValue = param.asInt();
 }
 BLYNK_WRITE(V1) {
-  greenValue = 255 - param.asInt();
+  greenValue = param.asInt();
 }
 BLYNK_WRITE(V2) {
-  blueValue = 255 - param.asInt();
+  blueValue = param.asInt();
 }
 
 void setup() {
